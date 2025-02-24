@@ -7,7 +7,7 @@
 #       on local network/host security.
 
 
-FROM --plaform=linux/amd64 fedora:latest
+FROM --platform=linux/amd64 fedora:latest
 
 # epel for cabextract
 RUN yum update -y \
