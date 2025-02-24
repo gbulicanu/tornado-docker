@@ -131,4 +131,5 @@ ENV DOCMOSIS_OFFICEDIR=/opt/libreoffice \
 
 EXPOSE 8080
 VOLUME /home/docmosis/templates
-CMD ["sh", "-c", "java -Dport=8080 -Djava.util.logging.config.file=javaLogging.properties -Ddocmosis.tornado.render.useUrl=http://localhost:8080/ -jar docmosisTornado.war"]
+#CMD ["sh", "-c", "java -Dport=8080 -Djava.util.logging.config.file=javaLogging.properties -Ddocmosis.tornado.render.useUrl=http://localhost:8080/ -jar docmosisTornado.war"]
+CMD ["sh", "-c", "ls"]
