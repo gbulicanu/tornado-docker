@@ -104,7 +104,7 @@ RUN printf '%s\n' \
 
 # add tini to manage zombie/defunct processes since java process has pid=1
 # if using "docker run" you can use the "--init" parameter which uses tini directly
-ENV TINI_VERSION v0.19.0
+ENV TINI_VERSION=v0.19.0
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
 RUN chmod +x /tini
 ENTRYPOINT ["/tini", "--"]
