@@ -44,7 +44,7 @@ RUN yum install -y https://downloads.sourceforge.net/project/mscorefonts2/rpms/m
     && yum clean all \
     && rm -rf /var/cache/yum
 
-ENV LIBREOFFICE_VERSION=7.5.9.2
+ENV LIBREOFFICE_VERSION=7.6.7.2
 ENV LIBREOFFICE_MIRROR=https://s3.us-west-2.amazonaws.com/com.docmosis.public.download.archive/downloads/libreoffice/
 ENV LIBREOFFICE_ARCHIVE=LibreOffice_${LIBREOFFICE_VERSION}_Linux_x86-64_Collabora-Build.rpm.tar.gz
 
