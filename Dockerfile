@@ -129,7 +129,10 @@ ENV DOCMOSIS_OFFICEDIR=/opt/libreoffice \
 # Allow UNC paths in Tornado configuration.  Disabled by default because of inherent security risk).
 #ENV DOCMOSIS_ALLOWUNCPATHS=true
 
+COPY --chmod=755 ./entrypoint.sh /home/entrypoint.sh
+
 EXPOSE 8080
 VOLUME /home/docmosis/templates
 #CMD ["sh", "-c", "java -Dport=8080 -Djava.util.logging.config.file=javaLogging.properties -Ddocmosis.tornado.render.useUrl=http://localhost:8080/ -jar docmosisTornado.war"]
-CMD ["sh", "-c", "ls"]
+
+CMD ["sh", "-c", "/home/entrypoint.sh"]
